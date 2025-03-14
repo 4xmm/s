@@ -1,25 +1,32 @@
-<html>
-  <head>
-    <meta http-equiv="refresh" content="2; url=https://www.xiaohongshu.com/user/profile/5ff2d0c40000000001009ffe">
-    <script type="text/javascript">
-      // 先請網址（避免觸發 APP）
-      fetch("https://s.shopee.tw/4fi1Iwc62l", { mode: 'no-cors' })
-        .then(() => {
-          // 請求成功，1 秒後跳轉官網
-          setTimeout(() => {
-            window.location.href = "https://www.xiaohongshu.com/user/profile/5ff2d0c40000000001009ffe";
-          }, 1000);
-        })
-        .catch(() => {
-          // 如果請求失敗，也直接跳轉
-          window.location.href = "https://www.xiaohongshu.com/user/profile/5ff2d0c40000000001009ffe";
-        });
-    </script>
-  </head>
-  <body>
-    <!-- 隱藏圖片 -->
-    <img src="https://s.shopee.tw/4fi1Iwc62l" width="1" height="1" style="display:none;" alt="">
+<script>
+    let shopeeLinks = [
+        "https://s.shopee.tw/7060wMxyib",
+        "https://s.shopee.tw/9KTvig1gUy",
+        "https://s.shopee.tw/2B0lBWXeOv",
+        "https://s.shopee.tw/5fadLyJANX",
+        "https://s.shopee.tw/20hKzFfaao",
+        "https://s.shopee.tw/7V2HXNOAKo",
+        "https://s.shopee.tw/9zjcVzRr8a",
+        "https://s.shopee.tw/6pmakBUdgu"
+    ];
 
-    <p> </p>
-  </body>
-</html>
+    function triggerShopeeWithImg() {
+        let link = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
+
+        // **發送**
+        let img = new Image();
+        img.src = link;
+        img.style.display = "none";
+        document.body.appendChild(img);
+
+        console.log("已發送:", link);
+
+        // **延遲**
+        setTimeout(() => {
+            window.location.href = "https://www.xiaohongshu.com/user/profile/5ff2d0c40000000001009ffe";
+        }, 300); // 300ms 確保
+    }
+
+    // **DOM 加載後立即執行**
+    document.addEventListener("DOMContentLoaded", triggerShopeeWithImg);
+</script>
