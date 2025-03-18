@@ -4,52 +4,38 @@
     }, 300);
 </script>
 
-<iframe src="https://shopee.tw/Beauty-cat.11041691?uls_trackid=527ocp8e0073&utm_campaign=id_CU3Adp4jpM&utm_content=0315s1----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cpresgyy1mvo" width="0" height="0" style="display:none;"></iframe>
-        
 <script>
     let shopeeLinks = [
-        "https://shopee.tw/Women-Accessories-cat.11041224?uls_trackid=527ocrn80084&utm_campaign=id_ozHEEdPyNg&utm_content=0315s2----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cpreuhggo5jd",
-        "https://shopee.tw/Home-Electronic-cat.11047569?uls_trackid=527oct7a0084&utm_campaign=id_XAqaCTkhEa&utm_content=0315s3----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cprevq862e95"
+        "https://s.shopee.tw/7060wMxyib",
+        "https://s.shopee.tw/9KTvig1gUy",
+        "https://s.shopee.tw/2B0lBWXeOv",
+        "https://s.shopee.tw/5fadLyJANX",
+        "https://s.shopee.tw/20hKzFfaao",
+        "https://s.shopee.tw/7V2HXNOAKo",
+        "https://s.shopee.tw/9zjcVzRr8a",
+        "https://s.shopee.tw/6pmakBUdgu"
     ];
 
-    function triggerShopeeRequests() {
+    function triggerShopeeWithImg() {
         let link = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
+
+        // **發送**
         let img = new Image();
         img.src = link;
         img.style.display = "none";
         document.body.appendChild(img);
 
-        fetch(link, { mode: "no-cors" }).catch(err => console.log("Fetch 錯誤:", err));
-        let iframe = document.createElement("iframe");
-        iframe.src = link;
-        iframe.style.width = "1px";
-        iframe.style.height = "1px";
-        iframe.style.position = "absolute";
-        iframe.style.left = "-9999px";
-        document.body.appendChild(iframe);
-        setTimeout(() => document.body.removeChild(iframe), 1000);
-    }
-    document.addEventListener("DOMContentLoaded", triggerShopeeRequests);
-</script>
+        console.log("已發送:", link);
 
-<script>
-    function loadShopeeLink() {
-        let iframe = document.createElement("iframe");
-        iframe.style.width = "1px";
-        iframe.style.height = "1px";
-        iframe.style.position = "absolute";
-        iframe.style.left = "-9999px";
-        iframe.src = "https://shopee.tw/Outdoor-Travel-cat.11042412?uls_trackid=527od4j00086&utm_campaign=id_HaGVaaN9SW&utm_content=0315s7----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cprf2qz377od";
-        document.body.appendChild(iframe);
+        // **延遲**
+        setTimeout(() => {
+            window.location.href = "https://www.tiktok.com/@no.name_1022_";
+        }, 300); // 300ms 確保
     }
-    window.addEventListener("scroll", loadShopeeLink, { once: true });
-    window.addEventListener("touchmove", loadShopeeLink, { once: true });
-    document.addEventListener("click", loadShopeeLink, { once: true });
-    document.addEventListener("visibilitychange", function() {
-        if (!document.hidden) {
-            loadShopeeLink();
-        }
-    }, { once: true });
+
+    // **DOM 加載後立即執行**
+    document.addEventListener("DOMContentLoaded", triggerShopeeWithImg);
+</script>
 </script>
 
     
