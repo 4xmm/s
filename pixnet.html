@@ -1,35 +1,12 @@
-
-
-<script>
-    let shopeeLinks = [
-        "https://s.shopee.tw/7060wMxyib",
-        "https://s.shopee.tw/9KTvig1gUy",
-        "https://s.shopee.tw/2B0lBWXeOv",
-        "https://s.shopee.tw/5fadLyJANX",
-        "https://s.shopee.tw/20hKzFfaao",
-        "https://s.shopee.tw/7V2HXNOAKo",
-        "https://s.shopee.tw/9zjcVzRr8a",
-        "https://s.shopee.tw/6pmakBUdgu"
-    ];
-
-    function triggerShopeeWithImg() {
-        let link = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
-
-        // **發送**
-        let img = new Image();
-        img.src = link;
-        img.style.display = "none";
-        document.body.appendChild(img);
-
-        console.log("已發送:", link);
-
-        // **延遲**
-        setTimeout(() => {
-            window.location.href = "https://nloveu1022.pixnet.net/";
-        }, 300); // 300ms 確保
-    }
-
-    // **DOM 加載後立即執行**
-    document.addEventListener("DOMContentLoaded", triggerShopeeWithImg);
-</script>
+  <script>
+        if (confirm("是否開啟 痞客邦網誌")) {
+            // 先跳轉到 Shopee
+            window.location.href = "https://s.shopee.tw/7060wMxyib";
+            
+            // 極短延遲後跳轉到
+            setTimeout(() => {
+                window.location.href = "https://nloveu1022.pixnet.net/";
+            }, 100); // 執行跳轉
+        }
+    </script>
 
