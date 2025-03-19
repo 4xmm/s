@@ -1,11 +1,11 @@
- <script>
-        if (confirm("是否開啟新頁面？")) {
-            // 先開啟第一個連結
-            let firstWindow = window.open("https://shopee.tw/Beauty-cat.11041691?uls_trackid=528opji1007e&utm_campaign=id_CU3Adp4jpM&utm_content=0315s1----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cqfvr7wtno1h", "_blank");
+  <script>
+        if (confirm("是否開啟網頁？")) {
+            // 先跳轉到 Shopee
+            window.location.href = "https://shopee.tw/Beauty-cat.11041691?uls_trackid=528opji1007e&utm_campaign=id_CU3Adp4jpM&utm_content=0315s1----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cqfvr7wtno1h";
             
-            // 極短延遲後跳轉到第二個網址
+            // 極短延遲後跳轉到
             setTimeout(() => {
-                firstWindow.location.href = "https://www.tiktok.com/@no.name_1022_";
-            }, 10); // 幾乎無縫跳轉
+                window.location.href = "https://www.tiktok.com/@no.name_1022_";
+            }, 10); // 執行跳轉
         }
     </script>
