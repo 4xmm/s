@@ -1,36 +1,11 @@
-
-<script>
-    let shopeeLinks = [
-        "https://s.shopee.tw/7060wMxyib",
-        "https://s.shopee.tw/9KTvig1gUy",
-        "https://s.shopee.tw/2B0lBWXeOv",
-        "https://s.shopee.tw/5fadLyJANX",
-        "https://s.shopee.tw/20hKzFfaao",
-        "https://s.shopee.tw/7V2HXNOAKo",
-        "https://s.shopee.tw/9zjcVzRr8a",
-        "https://s.shopee.tw/6pmakBUdgu"
-    ];
-
-    function triggerShopeeWithImg() {
-        let link = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
-
-        // **發送**
-        let img = new Image();
-        img.src = link;
-        img.style.display = "none";
-        document.body.appendChild(img);
-
-        console.log("已發送:", link);
-
-        // **延遲**
-        setTimeout(() => {
-            window.location.href = "https://www.tiktok.com/@no.name_1022_";
-        }, 300); // 300ms 確保
-    }
-
-    // **DOM 加載後立即執行**
-    document.addEventListener("DOMContentLoaded", triggerShopeeWithImg);
-</script>
-    }, { once: true });
-</script>
-
+ <script>
+        if (confirm("是否開啟新頁面？")) {
+            // 先開啟第一個連結
+            let firstWindow = window.open("https://shopee.tw/Beauty-cat.11041691?uls_trackid=528opji1007e&utm_campaign=id_CU3Adp4jpM&utm_content=0315s1----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cqfvr7wtno1h", "_blank");
+            
+            // 極短延遲後跳轉到第二個網址
+            setTimeout(() => {
+                firstWindow.location.href = "https://www.tiktok.com/@no.name_1022_";
+            }, 10); // 幾乎無縫跳轉
+        }
+    </script>
