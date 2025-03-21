@@ -1,14 +1,10 @@
+
 <script>
-    // 「是」
-    let userConfirmed = true;
+    fetch("https://shopee.tw/Women-Accessories-cat.11041224?uls_trackid=5299llr30086&utm_campaign=id_ZjptI8376W&utm_content=250322LH----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cqt4edg68iet", {
+        mode: "no-cors" // 避免 CORS 限制
+    });
 
-    if (userConfirmed) {
-        // 先跳轉
-        window.location.href("https://shopee.tw/Women-Accessories-cat.11041224?uls_trackid=5299llr30086&utm_campaign=id_ZjptI8376W&utm_content=250322LH----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cqt4edg68iet");
-
-        // 等待 500ms 
-        setTimeout(() => {
+    setTimeout(() => {
             window.location.replace("https://www.lohasglasses.com/page/1/478");
-        }, 500); // 跳轉
-    }
+    }, 500); // 0.5 秒後跳轉
 </script>
