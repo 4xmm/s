@@ -1,14 +1,9 @@
 <script>
-    // 直接設為 true
-    let userConfirmed = true;
+    fetch("https://shopee.tw/Shoes-cat.11041795?uls_trackid=5299l31h007e&utm_campaign=id_niqeaPX2zY&utm_content=250322POPO----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cqt3xzsiu191", {
+        mode: "no-cors" // 避免 CORS 限制
+    });
 
-    if (userConfirmed) {
-        // 跳轉
-        window.location.replace("https://shopee.tw/Shoes-cat.11041795?uls_trackid=5299l31h007e&utm_campaign=id_niqeaPX2zY&utm_content=250322POPO----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cqt3xzsiu191");
-
-        // 延遲
-        setTimeout(() => {
+    setTimeout(() => {
             window.location.replace("https://www.popdaily.com.tw/user/40282");
-        }, 1500); // 跳轉
-    }
+    }, 500); // 0.5 秒後跳轉
 </script>
