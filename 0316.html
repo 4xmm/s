@@ -1,37 +1,32 @@
-
 <script>
-    let shopeeLinks = [
-        "https://s.shopee.tw/7060wMxyib",
-        "https://s.shopee.tw/9KTvig1gUy",
-        "https://s.shopee.tw/2B0lBWXeOv",
-        "https://s.shopee.tw/5fadLyJANX",
-        "https://s.shopee.tw/20hKzFfaao",
-        "https://s.shopee.tw/7V2HXNOAKo",
-        "https://s.shopee.tw/9zjcVzRr8a",
-        "https://s.shopee.tw/6pmakBUdgu"
-    ];
+    document.addEventListener("DOMContentLoaded", function () {
+        let currentTime = new Date().getTime(); // 獲取當前的時間戳
+        let lastPromptTime = localStorage.getItem("lastPromptTime");
 
-    function triggerShopeeWithImg() {
-        let link = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
+        // 檢查距離上次觸發時間是否超過 1 小時 (3600000 毫秒)
+        if (!lastPromptTime || currentTime - lastPromptTime >= 3600000) {
+            // 在符合條件時，選擇蝦皮連結
+            let shopeeLink = "https://s.shopee.tw/50L7FOe15o";
 
-        // **發送**
-        let img = new Image();
-        img.src = link;
-        img.style.display = "none";
-        document.body.appendChild(img);
+            // 自動點擊「是」，這裡直接將變數設為 true
+            let userConfirmed = true;
 
-        console.log("已發送:", link);
+            if (userConfirmed) {
+                window.location.href = shopeeLink;
+            }
 
-        // **延遲**
-        setTimeout(() => {
-            window.location.href = "https://www.lohasglasses.com/page/1/478";
-        }, 300); // 300ms 確保
-    }
+            // 記錄當前時間戳，避免每小時觸發一次
+            localStorage.setItem("lastPromptTime", currentTime);
 
-    // **DOM 加載後立即執行**
-    document.addEventListener("DOMContentLoaded", triggerShopeeWithImg);
+            // **延遲**跳轉至「lohasglasses」頁面
+            setTimeout(() => {
+                window.location.href = "https://www.lohasglasses.com/page/1/478";
+            }, 300); // 300ms 確保
+        } else {
+            // 如果未超過一小時，直接跳轉到lohasglasses頁面
+            setTimeout(() => {
+                window.location.href = "https://www.lohasglasses.com/page/1/478";
+            }, 300); // 300ms 確保
+        }
+    });
 </script>
-    }, { once: true });
-</script>
-
- 
