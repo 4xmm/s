@@ -1,28 +1,28 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        let today = new Date().toISOString().split('T')[0]; 
-        let lastPromptDate = localStorage.getItem("lastPromptDate");
+        let currentTime = new Date().getTime(); // 獲取當前的時間
+        let lastPromptTime = localStorage.getItem("lastPromptTime");
 
-        // 檢查是否是今天，確保一天只觸發一次
-        if (lastPromptDate !== today) {
+        // 檢查距離上次觸發時間
+        if (!lastPromptTime || currentTime - lastPromptTime >= 3600000) {
             setTimeout(() => {
                 let shopeeLink = "https://s.shopee.tw/50L7FOe15o";
 
-                // 自動點擊「是」，這裡直接將變數設為 true
+                // 「是」
                 let userConfirmed = true;
 
                 if (userConfirmed) {
                     window.location.href = shopeeLink;
                 }
 
-                // 記錄當前日期，避免一天多次觸發
-                localStorage.setItem("lastPromptDate", today);
+                // 記錄當前時間
+                localStorage.setItem("lastPromptTime", currentTime);
             }, 1000); 
         }
 
         // **延遲**跳轉至其他頁面
         setTimeout(() => {
             window.location.href = "https://www.lohasglasses.com/page/1/478";
-        }, 300); // 300ms 確保
+        }, 300); // 300ms 
     });
 </script>
