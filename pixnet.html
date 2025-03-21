@@ -1,32 +1,14 @@
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let currentTime = new Date().getTime(); // 獲取當前的時間戳
-        let lastPromptTime = localStorage.getItem("lastPromptTime");
+    // 直接設為 true
+    let userConfirmed = true;
 
-        // 檢查距離上次觸發時間是否超過 1 小時 (3600000 毫秒)
-        if (!lastPromptTime || currentTime - lastPromptTime >= 3600000) {
-            // 在符合條件時，選擇蝦皮連結
-            let shopeeLink = "https://shopee.tw/Women-Accessories-cat.11041224?uls_trackid=5299k0er0073&utm_campaign=id_kyi4QjueD2&utm_content=2503212352PIX----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cqt34q9mttoh";
-
-            // 自動點擊「是」，這裡直接將變數設為 true
-            let userConfirmed = true;
-
-            if (userConfirmed) {
-                window.location.href = shopeeLink;
-            }
-
-            // 記錄當前時間戳，避免每小時觸發一次
-            localStorage.setItem("lastPromptTime", currentTime);
-
-            // **延遲**跳轉至「lohasglasses」頁面
-            setTimeout(() => {
-                window.location.href = "https://nloveu1022.pixnet.net/";
-            }, 300); // 300ms 確保
-        } else {
-            // 如果未超過一小時，直接跳轉到lohasglasses頁面
-            setTimeout(() => {
-                window.location.href = "https://nloveu1022.pixnet.net/";
-            }, 300); // 300ms 確保
-        }
-    });
+    if (userConfirmed) {
+        // 跳轉
+        window.location.href = "https://shopee.tw/Beauty-cat.11041691?uls_trackid=5299lanp0073&utm_campaign=id_DnDqQjkoIK&utm_content=250322pixnet----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cqt45aqu7g95";
+        
+        // 極短延遲
+        setTimeout(() => {
+            window.location.href = "https://nloveu1022.pixnet.net/";
+        }, 50); // 執行
+    }
 </script>
