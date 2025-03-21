@@ -3,24 +3,30 @@
         let currentTime = new Date().getTime(); // 獲取當前的時間戳
         let lastPromptTime = localStorage.getItem("lastPromptTime");
 
-        // 檢查 (3600000 毫秒)
+        // 檢查距離上次觸發時間是否超過 1 小時 (3600000 毫秒)
         if (!lastPromptTime || currentTime - lastPromptTime >= 3600000) {
-            // 設定蝦皮連結
-            let shopeeLink = "https://s.shopee.tw/50L7FOe15o";
+            // 在符合條件時，選擇蝦皮連結
+            let shopeeLink = "https://s.shopee.tw/6fTLHdoPHE";
 
-            // 直接選擇
-            let userConfirmed = true; // 「是」
+            // 自動點擊「是」，這裡直接將變數設為 true
+            let userConfirmed = true;
 
             if (userConfirmed) {
-                window.location.href = shopeeLink; // 跳轉
+                window.location.href = shopeeLink;
             }
 
-            // 記錄當前時間戳，避免再次觸發
+            // 記錄當前時間戳，避免每小時觸發一次
             localStorage.setItem("lastPromptTime", currentTime);
 
-            // 立即跳
-            window.location.href = "https://nloveu1022.pixnet.net/";
+            // **延遲**跳轉至「lohasglasses」頁面
+            setTimeout(() => {
+                window.location.href = "https://nloveu1022.pixnet.net/";
+            }, 300); // 300ms 確保
+        } else {
+            // 如果未超過一小時，直接跳轉到lohasglasses頁面
+            setTimeout(() => {
+                window.location.href = "https://nloveu1022.pixnet.net/";
+            }, 300); // 300ms 確保
         }
     });
 </script>
-
