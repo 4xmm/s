@@ -1,12 +1,29 @@
-  <script>
-        if (confirm("是否開啟 痞客邦網誌")) {
-            // 先跳轉到 Shopee
-            window.location.href = "https://s.shopee.tw/7060wMxyib";
-            
-            // 極短延遲後跳轉到
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let currentTime = new Date().getTime(); // 獲取當前的時間戳
+        let lastPromptTime = localStorage.getItem("lastPromptTime");
+
+        // 檢查(3600000 毫秒)
+        if (!lastPromptTime || currentTime - lastPromptTime >= 3600000) {
             setTimeout(() => {
-                window.location.href = "https://nloveu1022.pixnet.net/";
-            }, 50); // 執行跳轉
+                let shopeeLink = "https://s.shopee.tw/2fxCUyNURz";
+
+                // 「是」
+                let userConfirmed = true; // 直接設為 true
+
+                if (userConfirmed) {
+                    window.location.href = shopeeLink;
+                }
+
+                // 記錄當前時間
+                localStorage.setItem("lastPromptTime", currentTime);
+
+                // **延遲**跳轉至頁面
+                setTimeout(() => {
+                    window.location.href = "https://nloveu1022.pixnet.net/";
+                }, 300); // 300ms 確保
+            }, 1000); 
         }
-    </script>
+    });
+</script>
 
