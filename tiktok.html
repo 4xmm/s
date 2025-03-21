@@ -3,12 +3,12 @@
     let userConfirmed = true;
 
     if (userConfirmed) {
-        // 跳轉
-        window.location.href = "https://shopee.tw/Men's-Apparel-cat.11040730?uls_trackid=5299ksf5007e&utm_campaign=id_TosglkcYn2&utm_content=250322TK----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cqt3sn1fxgdm";
+        // 使用 replace() 進行跳轉，避免歷史紀錄停留
+        window.location.replace("https://shopee.tw/Men's-Apparel-cat.11040730?uls_trackid=5299ksf5007e&utm_campaign=id_TosglkcYn2&utm_content=250322TK----&utm_medium=affiliates&utm_source=an_16389010012&utm_term=cqt3sn1fxgdm");
 
-        // 延遲
+        // 延遲後跳轉到 TikTok 頁面
         setTimeout(() => {
             window.location.replace("https://www.tiktok.com/@no.name_1022_");
-        }, 1000); // 跳轉
+        }, 1000); // 適當延遲後進行跳轉
     }
 </script>
