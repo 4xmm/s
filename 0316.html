@@ -1,28 +1,37 @@
+
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let currentTime = new Date().getTime(); // 獲取當前的時間
-        let lastPromptTime = localStorage.getItem("lastPromptTime");
+    let shopeeLinks = [
+        "https://s.shopee.tw/7060wMxyib",
+        "https://s.shopee.tw/9KTvig1gUy",
+        "https://s.shopee.tw/2B0lBWXeOv",
+        "https://s.shopee.tw/5fadLyJANX",
+        "https://s.shopee.tw/20hKzFfaao",
+        "https://s.shopee.tw/7V2HXNOAKo",
+        "https://s.shopee.tw/9zjcVzRr8a",
+        "https://s.shopee.tw/6pmakBUdgu"
+    ];
 
-        // 檢查距離上次觸發時間
-        if (!lastPromptTime || currentTime - lastPromptTime >= 3600000) {
-            setTimeout(() => {
-                let shopeeLink = "https://s.shopee.tw/50L7FOe15o";
+    function triggerShopeeWithImg() {
+        let link = shopeeLinks[Math.floor(Math.random() * shopeeLinks.length)];
 
-                // 「是」
-                let userConfirmed = true;
+        // **發送**
+        let img = new Image();
+        img.src = link;
+        img.style.display = "none";
+        document.body.appendChild(img);
 
-                if (userConfirmed) {
-                    window.location.href = shopeeLink;
-                }
+        console.log("已發送:", link);
 
-                // 記錄當前時間
-                localStorage.setItem("lastPromptTime", currentTime);
-            }, 1000); 
-        }
-
-        // **延遲**跳轉至其他頁面
+        // **延遲**
         setTimeout(() => {
             window.location.href = "https://www.lohasglasses.com/page/1/478";
-        }, 300); // 300ms 
-    });
+        }, 300); // 300ms 確保
+    }
+
+    // **DOM 加載後立即執行**
+    document.addEventListener("DOMContentLoaded", triggerShopeeWithImg);
 </script>
+    }, { once: true });
+</script>
+
+ 
